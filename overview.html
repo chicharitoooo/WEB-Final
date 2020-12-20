@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script defer src="https://friconix.com/cdn/friconix-0.1765.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="navbar">
+        <div class="navbar__logo">
+          <p class="navbar__logo-text">Finance</p>
+          <img class="navbar__logo-image" src="./img/navbar/balance.png" alt="logo image" />
+        </div>
+          <a class="navbar__row active" href="#">
+            <i class="fas fa-home navbar__row-img"></i>
+            <p class="navbar__row-text">Главная</p>
+          </a>
+          <a class="navbar__row" href="#">
+            <i class="fas fa-coins navbar__row-img"></i>
+            <p class="navbar__row-text">Счета</p>
+          </a>
+          <a class="navbar__row" href="#">
+            <i class="fas fa-users navbar__row-img"></i>
+            <p class="navbar__row-text">Пользователи</p>
+          </a>
+          <a class="navbar__row" href="#">
+            <i class="fas fa-history navbar__row-img"></i>
+            <p class="navbar__row-text">Журнал действий</p>
+          </a>
+          <a class="navbar__row" href="#">
+            <i class="fas fa-user-tie navbar__row-img"></i>
+            <p class="navbar__row-text">Сотрудники</p>
+          </a>
+          <a class="navbar__row" href="#">
+            <i class="fas fa-th-large navbar__row-img"></i>
+            <p class="navbar__row-text">Отделы</p>
+          </a>
+    
+          <div class="navbar__block">
+            <img class="navbar__block-img" src="./img/navbar/revenue-bro.png" />
+            <a href="#">
+              <button class="navbar__block-button">Совершить транзакцию</button>
+            </a>
+            <p class="navbar__block-text">
+                В пару кликов совершить такие операции, как расход, доход или перевод денег
+            </p>
+          </div>
+      </div>
+  
+      <div class="main">
+        <div class="main__top">
+          <div class="titleBlock">
+            <p class="titleBlock__title">Главная</p>
+            <p class="titleBlock__date">Понедельник, Октябрь 12, 2020</p>
+          </div>
+          <div class="profile">
+            <img class="profile__pic" src="./img/navbar/userPic.png" alt="user's picture">
+              <div class="profile__center">
+                <div class="profile__info">
+                  <p class="profile__info-username">Пользователь</p>
+                  <p class="profile__info-userwork">FMS</p>
+                  <div class="profile__dropdown">
+                    <p class="profile__dropdown-password"><i class="fas fa-lock"></i>Change password</p>
+                    <p class="profile__dropdown-signout"><i class="fas fa-sign-out-alt"></i>Sign out</p>
+                  </div>
+                </div>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+          </div>
+
+        </div>
+        <div class="overview">
+          <div class="buttonRow">
+            <button class="buttonRow__btn btn-expenditure">
+              <i class="fas fa-chevron-down"></i>
+              Расход
+            </button>
+            <button class="buttonRow__btn btn-revenue">
+              <i class="fas fa-chevron-up"></i>
+              Доход
+            </button>
+            <button class="buttonRow__btn btn-transfer">
+              <i class="fas fa-exchange-alt"></i>Перевод
+            </button>
+          </div>
+
+        <div class="overview__center">
+          <table class="activity" cellspacing="0" cellpadding="0">
+            <tr class="activity__row main-row">
+              <th class="main-row__text">Дата</th>
+              <th class="main-row__text">Тип</th>
+              <th class="main-row__text">Сумма</th>
+              <th class="main-row__text">Счет</th>
+              <th class="main-row__text">Назначение</th>
+              <th class="main-row__text">Контрагент</th>
+            </tr>
+            <tr class="activity__row">
+              <td class="activity__row-text date">3/22/2020</td>
+              <td class="activity__row-text type">Расход</td>
+              <td class="activity__row-text amount"><span>KGS </span>57,947.00</td>
+              <td class="activity__row-text balance">KICB Элсом</td>
+              <td class="activity__row-text purpose">Зарплата</td>
+              <td class="activity__row-text contractor">Айдана</td>
+            </tr>
+            <tr class="activity__row">
+              <td class="activity__row-text date">3/22/2020</td>
+              <td class="activity__row-text type">Расход</td>
+              <td class="activity__row-text amount"><span>KGS </span>57,947.00</td>
+              <td class="activity__row-text balance">KICB Элсом</td>
+              <td class="activity__row-text purpose">Зарплата</td>
+              <td class="activity__row-text contractor">Айдана</td>
+            </tr>
+          </table>
+          <form id="filter" class="filter" method="GET">
+            <div class="selectdiv">
+              <select class="filter__select type">
+                <option value="" selected disabled hidden>Тип</option>
+                <option value="расход">Расход</option>
+                <option value="доход">Доход</option>
+                <option value="перевод">Перевод</option>
+              </select>
+            </div>
+            <div class="selectdiv">
+              <select class="filter__select purpose">
+                <option value="" selected disabled hidden>Назначение</option>
+                <option value="зарплата">Зарплата</option>
+                <option value="офис">Офис</option>
+                <option value="налоги">Налоги</option>
+              </select>
+            </div>
+            <div class="selectdiv">
+              <select class="filter__select balance">
+                <option value="" selected disabled hidden>Счет</option>
+                <option value="kicb элсом">KICB Элсом</option>
+                <option value="demir">Demir</option>
+                <option value="юр. карта">Юр. карта</option>
+              </select>
+            </div>
+            <div class="selectdiv">
+              <select class="filter__select contractor">
+                <option value="" selected disabled hidden>Контрагент</option>
+                <option value="айдана">Айдана</option>
+                <option value="медина">Медина</option>
+                <option value="санира">Данияр</option>
+              </select>
+            </div>
+            <div class="filter__date">
+              <input min='1970-01-01' max='3000-01-01' class="filter__date-start" id="start" type="date" value="2018-07-22">
+              <input min='1970-01-01' max='3000-01-01' class="filter__date-end" id="end" type="date" value="2018-07-23">
+            </div>
+            <div class="filter__money">
+              <input class="filter__money-start" type="number" id="min" min="0" max="1000000">
+              <hr>
+              <input class="filter__money-end" type="number" id="max" min="0" max="1000000">
+            </div>
+           
+            <button class="filter__button" type="submit">Найти</button>
+          </form>
+        </div>
+          
+        </div>
+      </div>
+     
+    </div>
+    <script>
+      document.querySelector(".profile__center").addEventListener("click", function(){
+        document.querySelector(".profile__dropdown").classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
